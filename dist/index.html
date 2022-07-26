@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form-container">
+            <input class="search-a-team" id="search-a-team" type="text" placeholder="Search a team">
+            <button class="get-team=btn" id="get-a-team">Get Team</button>
+        </div>
+        <div class="team-players-container"></div>
+    </div>
+
+    <script id="team-players-template" type="text/x-Handlebars-template">
+       {{#each teamPlayersInfo}}
+         <div class="player-information">
+            <div>
+                <h1>{{fistName}} {{lastName}} </h1>
+                <h2> {{jersey}} </h2>
+            </div>
+            <div>
+                <h2>{{pos}}</h2>
+            </div>
+         </div>
+       {{/each}}
+   </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
